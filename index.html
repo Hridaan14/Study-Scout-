@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyScout — Study Smart</title>
+    <meta name="description"
+        content="StudyScout helps students find the best YouTube study videos instantly. Just type your topic, class, and language.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <span class="logo">StudyScout</span>
+        </div>
+        <div class="nav-divider"></div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <h1 class="headline">
+                <span class="headline-white">DON'T JUST STUDY</span>
+                <span class="headline-glow">STUDY SMARTER</span>
+            </h1>
+            <div class="headline-line"></div>
+            <p class="byline">A project by Hridaan Shah</p>
+        </section>
+
+        <!-- Core Interaction: Chatbox -->
+        <section class="chatbox-section" id="chatbox-section">
+            <div class="chatbox-container">
+                <textarea id="search-input" class="chatbox" rows="3"
+                    placeholder="What do you want to study ?&#10;(eg. Force and Pressure Class 8)"></textarea>
+            </div>
+            <button id="find-btn" class="find-btn">Find Videos</button>
+        </section>
+
+        <!-- Results Section (hidden by default) -->
+        <section id="results-section" class="results-section">
+            <div id="results-container" class="results-container"></div>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Scouting the best videos for you...</p>
+        </div>
+
+        <!-- No Results / Error State -->
+        <div id="no-results" class="no-results">
+            <p id="error-message">No relevant videos found. Try refining your topic.</p>
+            <button class="find-btn" onclick="resetSearch()">Search again</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>StudyScout is not affiliated with YouTube. Videos are sourced via YouTube's public API.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
