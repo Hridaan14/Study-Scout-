@@ -267,18 +267,18 @@ main {
 .chatbox-container {
     width: 100%;
     max-width: 680px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 18px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    backdrop-filter: blur(30px) saturate(1.5);
+    -webkit-backdrop-filter: blur(30px) saturate(1.5);
     box-shadow:
-        0 0 15px var(--accent-glow-sm),
-        0 0 40px var(--accent-glow-lg),
-        inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.05);
     transition:
         border-color 0.4s var(--ease-out),
-        box-shadow 0.4s var(--ease-out);
+        box-shadow 0.4s var(--ease-out),
+        background 0.4s var(--ease-out);
     overflow: hidden;
 }
 
@@ -314,11 +314,11 @@ main {
 
 /* --- Find Videos Button --- */
 .find-btn {
-    padding: 1.1rem 4rem;
-    font-size: 1.1rem;
+    padding: 0.8rem 3rem;
+    font-size: 0.95rem;
     font-weight: 700;
     font-family: var(--font-main);
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
     background: linear-gradient(90deg, #001c7a 0%, #1fe9c9 100%);
     color: #ffffff;
     border: 1px solid transparent;
@@ -336,7 +336,7 @@ main {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: -150%;
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg,
@@ -344,18 +344,20 @@ main {
             rgba(255, 255, 255, 0.45),
             transparent);
     transition: 0.6s var(--ease-out);
+    opacity: 0;
 }
 
 .find-btn:hover {
-    transform: translateY(-4px) scale(1.05);
-    border-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-4px) scale(1.03);
+    border-color: rgba(255, 255, 255, 0.8);
     box-shadow:
-        0 8px 25px rgba(31, 233, 201, 0.3),
-        0 0 50px rgba(31, 233, 201, 0.15);
+        0 8px 25px rgba(31, 233, 201, 0.2),
+        0 0 50px rgba(31, 233, 201, 0.1);
 }
 
 .find-btn:hover::before {
-    left: 100%;
+    left: 150%;
+    opacity: 1;
 }
 
 .find-btn:active {
@@ -540,7 +542,7 @@ main {
     text-align: center;
     padding: 4rem 1.5rem 3rem;
     color: var(--text-secondary);
-    font-size: 1.05rem;
+    font-size: 0.75rem;
     font-weight: 400;
     opacity: 0.75;
     position: relative;
